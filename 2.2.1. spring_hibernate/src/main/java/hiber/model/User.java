@@ -18,6 +18,15 @@ public class User {
 
     @Column(name = "email")
     private String email;
+
+    public Car getEmtCar() {
+        return emtCar;
+    }
+
+    public void setEmtCar(Car emtCar) {
+        this.emtCar = emtCar;
+    }
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "carId")
     private Car emtCar;
