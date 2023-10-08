@@ -19,6 +19,17 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", emtCar=" + emtCar +
+                '}';
+    }
+
     public Car getEmtCar() {
         return emtCar;
     }
@@ -26,6 +37,8 @@ public class User {
     public void setEmtCar(Car emtCar) {
         this.emtCar = emtCar;
     }
+
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "carId")

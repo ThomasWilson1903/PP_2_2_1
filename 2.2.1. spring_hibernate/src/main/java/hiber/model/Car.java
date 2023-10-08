@@ -14,6 +14,15 @@ public class Car {
     @Column(name = "series")
     private int series;
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "idCar=" + idCar +
+                ", model='" + model + '\'' +
+                ", series=" + series +
+                '}';
+    }
+
     public Car() {
     }
 
